@@ -1,5 +1,5 @@
 public class BillingCalloutService {
-    //Implement business and callout logic methods here
+    //Implement business and callout logic methods here 
     public static void callBillingService(
         Map<Id, Project__c> oldProjectMap,
         Map<Id, Project__c> newProjectMap,
@@ -43,7 +43,7 @@ public class BillingCalloutService {
             System.debug('response --> ' + response);
 
             if (response == 'OK') {
-                record.Status__c = 'Billed';
+                record.Status__c = 'Billed'; //  set status string here
                 update record;
             }
         } catch (Exception e) {
